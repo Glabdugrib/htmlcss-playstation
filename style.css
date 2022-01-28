@@ -256,7 +256,37 @@ img {
    cursor: pointer;
 }
 
+   /* Nuove uscite */
 
+.nuove-uscite {
+   color: white;
+   background-color: #1F1F1F;
+}
+
+.nuove-uscite h3 {
+   font-size: 32px;
+}
+
+.nuove-uscite h4 {
+   font-size: 25px;
+}
+
+.nuove-uscite .card .img-wrapper {
+   border-radius: 20px;
+   overflow: hidden;
+}
+
+.nuove-uscite .card .img-wrapper:hover {
+   transform: scale(1.02);
+   cursor: pointer;
+}
+
+.nuove-uscite .card_title {
+   font-size: 16px;
+   color: white;
+   margin-bottom: 0;
+   cursor: pointer;
+}
 
 
 
