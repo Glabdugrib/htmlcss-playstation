@@ -28,6 +28,18 @@ img {
    color: #CD3D0F;
 }
 
+.btn-blue {
+   background-color: #0070d1;
+   color: white;
+   font-weight: 600;
+}
+
+.btn-blue:hover {
+   border: 1px solid #0070d1;
+   background-color: white;
+   color: #0070d1;
+}
+
 /* - - - HEADER - - - */
 
    /* Banner logo */
@@ -161,7 +173,7 @@ img {
 }
 
 .game-banner_title {
-   font-size: 42px;
+   font-size: 40px;
 }
 
    /* Game carousel */
@@ -181,6 +193,69 @@ img {
    box-shadow: 0 0 0 3px #0070d1;
    border: 3px solid white;
 }
+
+   /* Section PS5 */
+
+.ps5 {
+   background-color: white;
+}
+
+.card {
+   border: none;
+   background-color: transparent;
+   border-radius: 0;
+}
+
+.card_subtitle{
+   font-size: 14px;
+   color: #0070d1;
+}
+
+.card_title {
+   font-size: 42px;
+   color: #272727;
+}
+
+.card_desc {
+   font-weight: 600;
+   color: #9c9c9c;
+   margin: 0;
+}
+
+.card-carousel .card {
+   padding-bottom: 5px;
+}
+
+.card-carousel .card .img-wrapper {
+   position: relative;
+}
+
+.card-carousel .card .img-wrapper::after{
+   content: "";
+   display: block;
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   background-color: white;
+   opacity: 0.5;
+   z-index: 1;
+   transition: opacity 0.3s ease-in-out;
+}
+
+.card-carousel .card.active .img-wrapper::after, .card-carousel .card:hover .img-wrapper::after {
+   opacity: 0;
+}
+
+.card-carousel .card.active {
+   border-bottom: 3px solid #0070d1;
+}
+
+.card-carousel .card:hover {
+   cursor: pointer;
+}
+
 
 
 
@@ -261,4 +336,9 @@ body.debug {
 
 .debug .game-banner .row div {
    /* background-color: red; */
+}
+
+.debug .card {
+   /* background-color: wheat;
+   border: 3px solid black; */
 }
