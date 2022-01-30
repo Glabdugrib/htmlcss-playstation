@@ -4,6 +4,14 @@ img {
    display: block;
 }
 
+ul {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
 .btn-grey {
    background-color: #363636;
    color: white;
@@ -39,6 +47,32 @@ img {
    background-color: white;
    color: #0070d1;
 }
+
+.btn-light-blue {
+   background-color: #D9DADC;
+   color: #0070d1;
+   font-weight: 600;
+   border: 1px solid #D9DADC
+}
+
+.btn-light-blue:hover {
+   background-color: #0070d1;
+   color: #D9DADC;
+}
+
+.btn-light-black {
+   background-color: #D9DADC;
+   color: #303030;
+   font-weight: 600;
+   border: 1px solid #D9DADC
+}
+
+.btn-light-black:hover {
+   background-color: #303030;
+   color: #D9DADC;
+}
+
+
 
 /* - - - HEADER - - - */
 
@@ -196,7 +230,7 @@ img {
 
    /* Section PS5 */
 
-.ps5 {
+.ps5, .ps4 {
    background-color: white;
 }
 
@@ -288,8 +322,57 @@ img {
    cursor: pointer;
 }
 
+   /* Playstation Plus */
 
+.playstation-plus {
+   background-color: #BEBCBB;
+}
 
+.img-wrapper.title_logo {
+   width: 60%;
+}
+
+   /* Sconti */
+
+.sconti {
+   background-color: white;
+}
+
+   /* Playstation Now */
+
+.playstation-now {
+   background-color: #161C3B;
+}
+
+.playstation-now p {
+   color: white;
+}
+
+   /* Social */
+
+.social {
+   background-color: white;
+}
+
+.social h2 {
+   font-size: 32px;
+}
+
+   /* Links */
+
+.links {
+   background-color: #00439C;
+   color: white;
+   fill: white;
+}
+
+.links a {
+   color: white;
+}
+
+.links p {
+   line-height: 18px;
+}
 
 /* - - - MEDIA QUERIES - - - */
 
@@ -324,6 +407,10 @@ img {
 
    .game-banner .img-wrapper {
       max-width: 400px;
+   }
+
+   .social .col-md-3 {
+      max-width: 120px;
    }
 }
 
