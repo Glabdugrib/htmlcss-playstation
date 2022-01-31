@@ -12,64 +12,99 @@ a {
    text-decoration: none;
 }
 
-.btn-grey {
-   background-color: #363636;
-   color: white;
+:root {
+   --ms-blue: #0070D1;
+   --ms-dark: #363636;
+   --ms-dark-hover: #606060;
+   --ms-orange: #CD3D0F;
+   --ms-light: #D9DADC;
+}
+
+/* Bottoni */
+
+[class*="btn-"] {
    font-weight: 600;
 }
 
-.btn-grey:hover {
-   border: 1px solid #363636;
-   background-color: white;
-   color: #363636;
+.ms_btn-dark {
+   background-color: var(--ms-dark);
+   color: white !important;
 }
 
-.btn-orange {
-   background-color: #CD3D0F;
-   color: white;
-   font-weight: 600;
+.ms_btn-dark:hover {
+   background-color: var(--ms-dark-hover);
 }
 
-.btn-orange:hover {
-   border: 1px solid #CD3D0F;
-   background-color: white;
-   color: #CD3D0F;
+.ms_btn-orange {
+   background-color: var(--ms-orange);
+   color: white !important;
+   position: relative;
 }
 
-.btn-blue {
-   background-color: #0070d1;
-   color: white;
-   font-weight: 600;
+.ms_btn-orange:hover::before {
+   content: "";
+   display: block;
+   position: absolute;
+   top: -5px;
+   bottom: -5px;
+   right: -5px;
+   left: -5px;
+   border-radius: 50rem;
+   border: 2px solid var(--ms-orange);
 }
 
-.btn-blue:hover {
-   border: 1px solid #0070d1;
-   background-color: white;
-   color: #0070d1;
+.ms_btn-blue {
+   background-color: var(--ms-blue);
+   color: white !important;
+   position: relative;
 }
 
-.btn-light-blue {
-   background-color: #D9DADC;
-   color: #0070d1;
-   font-weight: 600;
-   border: 1px solid #D9DADC
+.ms_btn-blue:hover::before {
+   content: "";
+   display: block;
+   position: absolute;
+   top: -5px;
+   bottom: -5px;
+   right: -5px;
+   left: -5px;
+   border-radius: 50rem;
+   border: 2px solid var(--ms-blue);
 }
 
-.btn-light-blue:hover {
-   background-color: #0070d1;
-   color: #D9DADC;
+.ms_btn-light {
+   background-color: var(--ms-light);
+   color: var(--ms-blue) !important;
+   position: relative;
 }
 
-.btn-light-black {
-   background-color: #D9DADC;
-   color: #303030;
-   font-weight: 600;
-   border: 1px solid #D9DADC
+.ms_btn-light:hover::before {
+   content: "";
+   display: block;
+   position: absolute;
+   top: -5px;
+   bottom: -5px;
+   right: -5px;
+   left: -5px;
+   border-radius: 50rem;
+   border: 2px solid var(--ms-light);
 }
 
-.btn-light-black:hover {
-   background-color: #303030;
-   color: #D9DADC;
+.ms_btn-light-black {
+   background-color: var(--ms-light);
+   color: var(--ms-dark) !important;
+   position: relative;
+}
+
+.ms_btn-light-black:hover::before {
+   content: "";
+   display: block;
+   position: absolute;
+   top: -5px;
+   bottom: -5px;
+   right: -5px;
+   left: -5px;
+   border-radius: 50rem;
+   border: 2px solid var(--ms-light);
 }
 
 
@@ -100,7 +135,7 @@ a {
 }
 
 #navbar .shared-nav-ps-logo {
-   fill: #0070d1;
+   fill: var(--ms-blue);
 }
 
 #navbar .nav-item a {
@@ -114,7 +149,7 @@ a {
 }
 
 #navbar .nav-item:hover a, #navbar .nav-item:hover a::before {
-   color: #0070d1;
+   color: var(--ms-blue);
 }
 
 #navbar .nav-item > a::before {
@@ -224,7 +259,7 @@ a {
 
 .game-carousel .img-wrapper.active, .game-carousel .img-wrapper:hover {
    cursor: pointer;
-   box-shadow: 0 0 0 3px #0070d1;
+   box-shadow: 0 0 0 3px var(--ms-blue);
    border: 3px solid white;
 }
 
@@ -242,7 +277,7 @@ a {
 
 .card_subtitle{
    font-size: 14px;
-   color: #0070d1;
+   color: var(--ms-blue);
 }
 
 .card_title {
@@ -283,7 +318,7 @@ a {
 }
 
 .card-carousel .card.active {
-   border-bottom: 3px solid #0070d1;
+   border-bottom: 3px solid var(--ms-blue);
 }
 
 .card-carousel .card:hover {
@@ -358,6 +393,15 @@ a {
    font-size: 32px;
 }
 
+.social .img-wrapper {
+   transition: all 0.3s ease-in-out;
+}
+
+.social .img-wrapper:hover {
+   cursor: pointer;
+   transform: scale(1.05);
+}
+
    /* Links */
 
 .links {
@@ -370,8 +414,9 @@ a {
    color: white;
 }
 
-.links p {
+.links .language {
    line-height: 18px;
+   cursor: pointer;
 }
 
 /* - - - MEDIA QUERIES - - - */
@@ -449,13 +494,4 @@ body.debug {
 
 .debug .dropdown-menu {
    background-color: orange;
-}
-
-.debug .game-banner .row div {
-   /* background-color: red; */
-}
-
-.debug .card {
-   /* background-color: wheat;
-   border: 3px solid black; */
 }
