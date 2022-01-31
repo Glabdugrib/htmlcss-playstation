@@ -1,3 +1,7 @@
+figure {
+   margin: 0;
+}
+
 img {
    max-height: 100%;
    max-width: 100%;
@@ -118,12 +122,12 @@ a {
    background-color: black;
 }
 
-#banner-logo .img-wrapper {
+#banner-logo figure {
    display: block;
    max-height: 100%;
 }
 
-#banner-logo .img-wrapper svg {
+#banner-logo figure svg {
    fill: white;
 }
 
@@ -207,7 +211,7 @@ a {
    border: none;
 }
 
-#navbar .nav-item .img-wrapper {
+#navbar .nav-item figure {
    height: 25px;
    aspect-ratio: 1 / 1;
 }
@@ -225,11 +229,11 @@ a {
    color: white;
 }
 
-.game-banner.game-returnal {
+#game-banner_returnal {
    background-image: url(img/jumbo-bg.png);
 }
 
-.game-banner.game-it-takes-two {
+#game-banner_it-takes-two {
    background-image: url(img/it-takes-two-hero-banner-desktop.jpg);
 }
 
@@ -237,7 +241,7 @@ a {
    min-height: 600px;
 }
 
-.game-banner .img-wrapper {
+.game-banner figure {
    max-width: 280px;
 }
 
@@ -247,20 +251,26 @@ a {
 
    /* Game carousel */
 
-.game-carousel {
+#game-carousel {
    background-color: white;
 }
 
-.game-carousel .img-wrapper {
+#game-carousel figure {
    border-radius: 10px;
    overflow: hidden;
    border: 3px solid transparent;
+   transition: transform 0.15s ease-in;
+   position: relative;
 }
 
-.game-carousel .img-wrapper.active, .game-carousel .img-wrapper:hover {
+#game-carousel figure.active, #game-carousel figure:hover {
    cursor: pointer;
    box-shadow: 0 0 0 3px var(--ms-blue);
    border: 3px solid white;
+}
+
+#game-carousel figure:hover {
+   transform: translateY(-0.5rem);
 }
 
    /* Section PS5 */
@@ -295,11 +305,11 @@ a {
    padding-bottom: 5px;
 }
 
-.card-carousel .card .img-wrapper {
+.card-carousel .card figure {
    position: relative;
 }
 
-.card-carousel .card .img-wrapper::after{
+.card-carousel .card figure::after{
    content: "";
    display: block;
    position: absolute;
@@ -313,7 +323,7 @@ a {
    transition: opacity 0.3s ease-in-out;
 }
 
-.card-carousel .card.active .img-wrapper::after, .card-carousel .card:hover .img-wrapper::after {
+.card-carousel .card.active figure::after, .card-carousel .card:hover figure::after {
    opacity: 0;
 }
 
@@ -340,12 +350,12 @@ a {
    font-size: 25px;
 }
 
-.nuove-uscite .card .img-wrapper {
+.nuove-uscite .card figure {
    border-radius: 20px;
    overflow: hidden;
 }
 
-.nuove-uscite .card .img-wrapper:hover {
+.nuove-uscite .card figure:hover {
    transform: scale(1.02);
    cursor: pointer;
 }
@@ -363,7 +373,7 @@ a {
    background-color: #BEBCBB;
 }
 
-.img-wrapper.title_logo {
+figure.title_logo {
    width: 60%;
 }
 
@@ -393,11 +403,11 @@ a {
    font-size: 32px;
 }
 
-.social .img-wrapper {
+.social figure {
    transition: all 0.3s ease-in-out;
 }
 
-.social .img-wrapper:hover {
+.social figure:hover {
    cursor: pointer;
    transform: scale(1.05);
 }
@@ -450,11 +460,11 @@ a {
 /* Layout M+ */
 @media screen and (min-width: 991px) {
 
-   .game-banner .img-wrapper {
+   .game-banner figure {
       max-width: 400px;
    }
 
-   .social .col-md-3 {
+   .social .col {
       max-width: 120px;
    }
 }
@@ -476,21 +486,13 @@ a {
 /* Layout XL+ */
 @media screen and (min-width: 1200px) {
 
-   .game-banner .img-wrapper {
+   .game-banner figure {
       max-width: 220px;
    }
 }
 
 
 /* - - - DEBUG - - - */
-
-body.debug {
-   background-color: cadetblue;
-}
-
-.debug main {
-   height: 300vh;
-}
 
 .debug .dropdown-menu {
    background-color: orange;
